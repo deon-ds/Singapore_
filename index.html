@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guide</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://th.bing.com/th/id/OIP.PAo9a9nygMRcEn7eTM3x4gHaFU?rs=1&pid=ImgDetMain') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            opacity: 0;
+            animation: fadeInBackground 1s forwards;
+        }
+
+        @keyframes fadeInBackground {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+            padding: 20px;
+            z-index: 10;
+            opacity: 0;
+            animation: fadeInContent 1.5s 0.5s forwards;
+        }
+
+        @keyframes fadeInContent {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 500px;
+            max-width: 90%; /* Adjust for smaller screens */
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInCard 1s ease-out forwards;
+        }
+
+        .card:first-child {
+            animation-delay: 0.5s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.7s;
+        }
+
+        @keyframes fadeInCard {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        .card h1 {
+            font-size: 1.8em;
+            margin: 10px 0;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .card button {
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #e64a19;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px; /* Reduce padding on smaller screens */
+            }
+
+            .card h1 {
+                font-size: 1.5em; /* Reduce heading size */
+            }
+
+            .card p {
+                font-size: 1em; /* Adjust text size */
+            }
+
+            .card button {
+                font-size: 1em; /* Adjust button size */
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" data-aos="fade-up">
+            <img src="https://wallpapercave.com/wp/wp2113020.jpg" alt="Singapore">
+            <h1>Travel Guide for Singapore</h1>
+            <p>Discover the beauty of Singapore with tips, tricks, and must-visit destinations.</p>
+            <a href="https://youtu.be/L8sPZIkKywA?si=0W4MVfxGdKswbc9O" target="_blank">
+                <button>Check Out!!</button>
+            </a>
+        </div>
+        <div class="card" data-aos="fade-right">
+            <img src="https://travelinoureyes.com/wp-content/uploads/2018/10/Singapore-Travel-Guide-1-800x1422.jpg" alt="Singapore Tips">
+            <h1>Singapore Travel Tips & Tricks</h1>
+            <p>Essential advice to make your Malaysia trip smooth and enjoyable.</p>
+            <a href="https://youtu.be/5kmFIlJjvOU?si=Ueijfodxi6pneIW7" target="_blank">
+                <button>Check Out Now!!</button>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            easing: 'ease-in-out',
+            once: true,
+        });
+    </script>
+</body>
+</html>
